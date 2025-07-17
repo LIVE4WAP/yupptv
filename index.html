@@ -151,8 +151,8 @@ a:hover, a:active {
                     currentChannel = {};  
                     const match = line.match(/tvg-id="([^"]+)"\s+tvg-chno="([^"]+)"\s+tvg-name="([^"]+)"\s+tvg-logo="([^"]+)"\s+group-title="([^"]+)"\s*,(.+)/);   
                    if (match) {  
-                        currentChannel.name = match[4];  
-                        currentChannel.logo = match[3];  
+                        currentChannel.name = match[6];  
+                        currentChannel.logo = match[4];  
                     }  
                 } else if (line.startsWith('#KODIPROP:inputstream.adaptive.license_key=')) {  
                     const keyMatch = line.match(/license_key=([^:]+):(.+)/);  
