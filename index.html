@@ -109,7 +109,12 @@ a:hover, a:active {
         
         
         
-        
+                <div id="search-bar-container">  
+            <input type="text" id="search-bar" placeholder="Search for channels..." onkeyup="filterChannels()">  
+            <div id="neon-switch">  
+                <div id="neon-toggle" class="" onclick="toggleNeon()">GO</div>  
+            </div>  
+        </div>  
         
             <div class="channel-grid"  id="channel-list"></div>
        
@@ -226,7 +231,15 @@ tile.onclick = () => switchChannel(ch.url);
 
                 
 
-            
+            function filterChannels() {  
+            const searchValue = document.getElementById('search-bar').value.toLowerCase();  
+            const channelTiles = document.querySelectorAll('.channel-tile');  
+            channelTiles.forEach(tile => {  
+                const channelName = tile.querySelector('.channel-name').textContent.toLowerCase();  
+                tile.style.display = channelName.includes(searchValue) ? '' : 'none';  
+            });  
+        }  
+
                 
 
         
