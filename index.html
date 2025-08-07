@@ -321,16 +321,16 @@ a:hover, a:active {
             } 
 
             
-            channels.forEach(ch => {
+            channels.forEach((channel, index) => {  
      
 const tile = document.createElement('div');  
                 tile.className='directory-item';  
                 
 tile.id='channelName';
-  const channelName = document.createElement('ch.name');  
+  const channelName = document.createElement('channel.name');  
 tile.dataset.category = ch.category;
 
-tile.innerHTML = `<a  href="https://tv4wap.github.io/p1?url=${ch.url}"><img src="${ch.logo}" alt="ch.name"><p>${ch.name}</p></a>`;
+tile.innerHTML = `<a  href="https://tv4wap.github.io/p1?url=${channel.url}"><img src="${channel.logo}" alt=""><p>${channel.name}</p></a>`;
        
 tile.onclick = () => switchChannel(ch.url);
 
