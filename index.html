@@ -327,7 +327,7 @@ const tile = document.createElement('div');
                 tile.className='directory-item';  
                 
 tile.id='channelName';
-    channelName.textContent = channel.name;  
+  const channelName = document.createElement('ch.name');  
 tile.dataset.category = ch.category;
 
 tile.innerHTML = `<a  href="https://tv4wap.github.io/p1?url=${ch.url}"><img src="${ch.logo}" alt="ch.name"><p>${ch.name}</p></a>`;
